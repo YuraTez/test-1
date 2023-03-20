@@ -1,0 +1,360 @@
+.title{
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 500;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  
+  @media (max-height: 700px) {
+    font-size: 28px;
+    line-height: 31px;
+  }
+}
+
+.banner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg/4@3x.png") no-repeat top/cover;
+  padding: 0 24px 38px;
+  z-index: 1;
+
+  @media (max-height: 700px) {
+    padding: 0 24px 18px;
+  }
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 21.61%, rgba(33, 38, 51, 0.95) 64.3%);
+    z-index: 1;
+  }
+
+  &-header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 0 20px;
+    top: 44px;
+    z-index: 2;
+
+    &__restore{
+      font-size: 13px;
+      line-height: 41px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.216667px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__cross{
+      width: 16px;
+      height: 16px;
+      background:  url("../images/cross.svg") no-repeat center/cover;
+    }
+
+    @media (max-height: 700px) {
+      top: 22px;
+    }
+  }
+
+  &-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+}
+
+
+.advantages-list{
+  margin-top: 29px;
+
+  &__item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: -0.321111px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
+    margin-top: 2px;
+
+    svg{
+      width: 26px;
+      height: 21px;
+    }
+  }
+}
+
+
+.subscription{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  gap: 15px;
+  margin: 52px 0 24px;
+
+  &__el{
+    position: relative;
+    min-height: 162px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 131px;
+    border-radius: 19px;
+    padding: 23px 0 13px;
+    background:  url("../images/shape-1.svg") no-repeat center/contain;
+    opacity: 0.5;
+    transition: .3s;
+
+    &.active{
+      width: 144px;
+      min-height: 178px;
+      padding: 24px 0 14px;
+      border-radius: 20.9px;
+      opacity: 1;
+      transform: scaleY(1.05);
+
+      &:before{
+        content: none;
+      }
+
+    }
+
+    &:before{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(73, 87, 149, 0.1);
+      border-radius: 19px;
+    }
+
+  }
+
+  &-sale{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -1px;
+    top: -1px;
+    width: 33px;
+    height: 33px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #DB0000;
+    border-radius: 100%;
+    transition: .3s;
+  }
+}
+
+.subscription__el--sale{
+  background: url("../images/shape-2.svg") no-repeat center/contain;
+}
+
+.subscription__time{
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+
+  @media (max-height: 700px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.subscription__price{
+  font-size: 14px;
+  line-height: 15px;
+  margin-bottom: 9px;
+  color: #FFFFFF;
+  text-align: center;
+
+  strong{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 15px;
+    color: #FFFFFF;
+
+    @media (max-height: 700px) {
+      font-size: 20px;
+      line-height: 13px;
+    }
+  }
+
+  @media (max-height: 700px) {
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+
+.subscription__banner{
+  width: calc(100% + 8px);
+  background: #495795;
+  padding: 2.19px 0 1.79px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 10.98px;
+
+  @media (max-height: 700px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.subscription__month-price{
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+
+  @media (max-height: 700px) {
+    font-size: 11px;
+    line-height: 12px;
+  }
+}
+
+
+.subscription__el.active {
+  .subscription__time{
+    font-size: 18.7px;
+    line-height: 22px;
+
+    @media (max-height: 700px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .subscription__price{
+    font-size: 15.4px;
+    line-height: 15px;
+
+    strong{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 15px;
+
+      @media (max-height: 700px) {
+        font-size: 21px;
+        line-height: 14px;
+      }
+    }
+
+    @media (max-height: 700px) {
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+
+  .subscription__banner{
+    font-size: 15.4px;
+    line-height: 18px;
+
+    @media (max-height: 700px) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .subscription__month-price{
+    font-size: 13.2px;
+    line-height: 15px;
+
+    @media (max-height: 700px) {
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+
+  .subscription-sale{
+    right: -2px;
+    top: -1px;
+    width: 37px;
+    height: 37px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+}
+
+
+.subscription-btn{
+  display: block;
+  width: 280px;
+  background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+  border-radius: 30px;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 19px 0 18px;
+  margin: 0 auto;
+
+  @media (max-height: 700px) {
+    width: 270px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 17px 0 16px;
+  }
+}
+
+.text-page{
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 16px;
+}
+
+.agreement{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+
+  &__item{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-decoration-line: underline;
+    color: #BDC0D0;
+  }
+}
+
